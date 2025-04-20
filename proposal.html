@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+	<style>
+			h1 {
+				text-align: center;
+				margin-bottom: 0;
+			}
+
+			h2 {
+				text-align: center;
+				margin-bottom: 0;
+			}
+
+			.container {
+				margin: 0 auto;
+				padding: 60px 20%;
+				/* display: flex;
+				align-items: center;
+				justify-content: center; */
+			}
+
+			figure {
+				text-align: center;
+			}
+
+			img {
+				display: inline-block;
+			}
+
+			body {
+				font-family: 'Inter', sans-serif;
+				line-height: 1.4;
+				color: #32323a;
+				background-color: #ffffff;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				width: 80%;
+				height: 100%;
+				margin: 0;
+				position: relative;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+		@media (max-width: 600px) {
+			body {
+				width: 100%;
+				left: 0;
+				transform: none;
+			}
+		}
+
+		a {
+			text-decoration: none;
+			color: #0057A8;
+		}
+
+		a:hover {
+			color: #8E018E !important;
+			text-decoration: underline;
+		}
+	</style>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Proposal</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<h1 style="align-self:flex-end;">Project Proposal: Texture The Tamagotchi! </h1>
+			<br>
+			<h2 style="align-self:flex-end;">Patrick Sanchez, Karson Du, Ryssa Malibiran, Alexa Banuelos</h2>
+			
+			<main>
+				<!-- <div class="image">
+					
+				</div> -->
+				<div class="content">
+					<h3>Summary</h3>
+					<p>Our team's final project for CS 184 tackles the question, "how does one apply a two-dimensional texture to a three-dimensional surface?" We also propose differing the albedo of the surface based on the color of the texture map's pixels. Thus, not only will the surface of the Tamagotchi shell be colored based on the projected inputted texture (whether drawn or uploaded), but the light reflected will also depend on the colors of the surface any lighting hits. </p>
+					<h3>Problems and how to solve</h3>
+					<p>We expect that the process of texture projection will encompass a couple sub-problems. Firstly, this entails accepting a user's inputted texture and converting into a data format that can be manipulated easily. Based on the previous homeworks, this could take the form as pixel colors stored in a large 1D array that is the size of the total pixel count. Afterward, the main task requires mapping that compilation of a 2D texture onto a 3D surface which is not as easily scaled down. Considering the mesh of the Tamagotchi, the texture will likely have to be distorted in order to properly wrap around the device's curves. From lecture, the Tamagotchi's mesh can also be converted into a 2D surface, which could make directly customizing the Tamagotchi more direct. Afterwards, we will have to modify or construct a path tracer to vary the albedo along the surface based on the colors sampled from the texture mapping.</p>
+					<h3>Goals and deliverables</h3>
+					<p> (1) Expected Performance: Our goal for our deliverable is to procedurally render 2D surface textures onto a Tamagotchi game device. Users should be able to inspect the game device in 3D with perspective controls. Screenshots of multiple angles should be provided as evidence of completion. Users may also upload their own textures to be mapped onto the device’s skin. Thus, screenshots of the device with custom skins from each of us should be provided. We can treat the untextured Tamagotchi as a control, measuring the time it takes for our systems to render the model, as well as the frames per second while running. Afterwards, we expect to see minimal quality or performance drop after projecting the texture onto the device. In addition, flat color applications can highlight the quality of coverage on the device, as we can identify any unmodified surfaces lacking the pigment change. Thus the questions we aim to answer are as follows:</p>
+						<ol>
+							<li>How much does texture projection affect system performance, does it differ based on texture complexity?</li>
+							<li>How much of the Tamagotchi surface can and will be paintable by textures?</li>
+							<li>In that sense, how can flat textures be convincingly applied to the surface?</li>
+							<li>How can reflected light be influenced by the colors of the texture?</li>
+						</ol>
+					<p> (2) Optimistic Performance: Our stretch goal is implementing an interactive Tamagotchi where the buttons on the Tamagotchi model will map to different ways of interacting with your Tamagotchi pet, such as feeding and petting. In terms of variable albedos, colors from the imprinted skin should affect the color and intensity of the light reflected off. The effect of reflected light will be less obvious, but should be captured via screenshots of how surrounding walls are illuminated with bounce lighting. As game features are implemented, we may expand on these goals: the rendering should occur efficiently timewise with a high frame rate, without noticeable buffering, and both the model and the screen of the Tamagotchi should align with our viewing angle.</p>
+					<h3>Schedule</h3>
+                    	<p><strong>Week 1, 4/7:</strong> Create our design document and begin planning our rendering systems with a focus on lighting and texture mapping and begin coding. Additionally, creating placeholder textures and 3D models for our Tamagotchi.
+						<br> <strong>Week 2, 4/14:</strong> Continue implementing functions described in our design doc, completing basic functionality (before speed-up) of texture mapping, and record our milestone video summary.
+						</p>
+						
+						<p><strong>Milestone:</strong> Sunday, April 20, 2025 at 11:59PM <br> Deliverables: Video summary and milestone report webpage
+						</p>
+						
+						<p><strong>Week 3, 4/21:</strong> Implement speed-up for our projection texture mapping, as well as our stretch goal of a basic Tamagotchi game design.
+						<br><strong>Week 4, 4/28:</strong> Create our final report, film our final video summary, and prepare for our in-person presentation, as well as improving our placeholder textures and models.
+						</p>
+						
+						<p><strong>Final:</strong> Sunday, May 4, 2025 at 11:59PM <br> Deliverables: Video, Webpage report, and Presentation
+						</p>
+					<h3>Resources</h3>
+                   		<ul>
+							<li><a href="https://www.cs.cmu.edu/~ph/texfund/texfund.pdf">Fundamentals of Texture Mapping and Image Warping”, Paul S. Heckbert (1989)</a></li>
+							<li><a href="https://www.youtube.com/watch?v=f2-FfB9kRmE&ab_channel=DarrinLile">Blender UV Mapping Tutorial Video Series</a></li>
+							<li><a href="https://docs.blender.org/manual/en/latest/modeling/meshes/uv/editing.html">Blender Manual</a></li>
+							<li><a href="https://www.youtube.com/watch?v=3GqUM4mEYKA">Learn HTML5 Canvas By Creating A Drawing App</a></li>
+						</ul>
+				</div>
+			</main>
+		</div>
+	</body>
+	<!-- <script>
+		var links = document.body.getElementsByTagName("a")
+		var a = window.location.href.indexOf(".io")
+		var repo_name = window.location.href.substring(a+3)
+		for(var i = 0; i < links.length; i++){
+			var link = links[i]
+			var actual_name = link.href.substring(link.href.indexOf(".io")+4)
+			link.href = repo_name + actual_name
+		}
+	</script> -->
+</html>
+
