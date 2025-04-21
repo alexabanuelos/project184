@@ -67,8 +67,9 @@
 			<main>
 				<div class="content">
 					<ul>
-						<li><a href="/proposal/index.html">Proposal Page</a></li>
-						<li><a href="/milestone/index.html">Milestone Page</a></li>
+						<li><a href="proposal/index.html">Proposal Page</a></li>
+						<li><a href="milestone/index.html">Milestone Page</a></li>
+						<li><a href="main/index.html">Main Project</a></li>
 					</ul>
 				</div>
 			</main>
@@ -78,10 +79,13 @@
 		var links = document.body.getElementsByTagName("a")
 		var a = window.location.href.indexOf(".io")
 		var repo_name = window.location.href.substring(a+3)
-		for(var i = 0; i < links.length; i++){
-			var link = links[i]
-			var actual_name = link.href.substring(link.href.indexOf(".io")+4)
-			link.href = repo_name + actual_name
+		if (a !== -1) {
+			var repo_name = window.location.href.substring(a + 4); // fix offset
+			for (var i = 0; i < links.length; i++) {
+				var link = links[i];
+				var actual_name = link.href.substring(link.href.indexOf(".io") + 4);
+				link.href = repo_name + actual_name;
+			}
 		}
 	</script>
 </html>
