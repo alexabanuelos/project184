@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\milestone",
+    "\\proposal"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\proposal\\index.html",
   "PreviewInSolutionExplorer": false
 }

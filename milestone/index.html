@@ -72,7 +72,7 @@
 	</style>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Milestone</title>
+    <title>Texture The Tomagatchi! - Project Milestone</title>
 	</head>
 
 	<body>
@@ -84,19 +84,47 @@
 			<main>
 				<div class="content">
 					<h3>Summary</h3>
-                    <p></p>
+					<p>
+						Currently we have implemented a simple scene in WebGL through three.js. Inside we have some examples of built-in custom materials and 3D primitive meshes, interactive camera functionality, and a simple light source. In addition, we added a custom texture onto a distorted plane using a mesh we defined manually, with a texture we imported. With blender we also constructed a shell of our Tamagatchi game device, exported in gltf (as desired by three.js).
+					</p>
 
 					<h3>Preliminary Results</h3>
-                    <p></p>
-                    
-                    <h3>Reflection: Goals and Deliverables</h3>
+					<p>
+						From the beginning there was some debate around where we should start. For example, we discussed taking code from Homework 2 that already had shading built in, and would allow us to possibly upsample our shell's mesh, but found it was unrealistic to work through the staff skeleton's code without guidance. The other homeworks had the same concern with the barrier of entry, especially since Homework 3's rendering would not be efficient enough for us to get to implement the game portion of our project proposal. Homework 4's simulation had some more hope, but it already had a staff texture handler built in using GLSL. Working off of the homeworks wouldn't noticeably accelerate our progress towards recreating the Tamagotchi environment we wanted.
+					</p>
+					<p>
+						While we were deciding if we should pivot our project idea slightly to fit the proposal, we thought of previous projects adjacent to our idea. One of our favorites built their projection model using three.js, which is also responsible for some popular games we had played before (Crossy Road, Krunker.io), which surprised us! Since .gltf 3D models include UV mesh information, we’re taking our current texture test as a proof of concept for implementing texture maps with standard volume projections. Since shapes such as boxes, spheres, and cylinders all have some merit for possible textures, we’d like to configure the code to have a UI that enables users to visualize textures using these shapes, and choose which one to apply to the tamagotchi skin. This felt like a good compromise, since we have already implemented Blinn-Phong shading as well as texture filtering methods in previous homeworks. Thus, spending more time on interaction with visuals and the in-between steps of projection over these features gives us new content to cover.
+					</p>
+
+					<h3>Reflection: Goals and Deliverables</h3>
+					<p>
+						With these new ideas in progress, depending on how implementing planar, cubic, spherical, and cylindrical coordinate mapping goes, we hope to finish the visualizations not too long after. Given two weeks, optimistically we can also find out how to take user inputs for uploaded custom images as textures, and retain our plans for drawing textures live inside of the website. From there, we can reassess gameplay with whatever of the timeline we have remaining!
+					</p>
 					<h3>Updated Schedule</h3>
+					<h3>Updated Schedule</h3>
+					<ul>
+						<li><strong>04/21/25 - 04/27/25:</strong> Work on standard projections—planar, boxy, cylindrical, and spherical.</li>
+						<li><strong>04/28/25 - 04/30/25:</strong> Implement UI and intermediate frames to visualize projection differences.</li>
+						<li><strong>05/01/25 - 05/04/25:</strong> Add gameplay functions to three buttons and, if time permits, a custom texture drawing interface.</li>
+					</ul>
 
-                    <h3>Milestone Video</h3>
-                    <a href="">Link to Google Drive attachment</a>
+					<div style="display: flex; flex-direction: column; align-items: center;">
+						<table style="width: 100%; text-align: center; border-collapse: collapse;">
+							<tr>
+								<td style="text-align: center;">
+									<img src="cs 184 sketch.jpg" width="400px" />
+									<figcaption>visualization steps</figcaption>
+								</td>
+							</tr>
+						</table>
+					</div>
 
-                    <h3>Milestone Slides</h3>
-                    <a href="">Link to Google Drive presentation</a>
+
+					<h3>Milestone Video</h3>
+					<a href="">Link to Google Drive attachment</a>
+
+					<h3>Milestone Slides</h3>
+					<a href="">Link to Google Drive presentation</a>
 				</div>
 			</main>
 		</div>
