@@ -9,7 +9,6 @@
 
  <!DOCTYPE html>
 
->>>>>>> 49a615a05711c812b1c019fba8c4cad97a3745e8
 <html lang="en">
 	<head>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -83,45 +82,11 @@
 			<h1 style="align-self:flex-end;">Project: Texture The Tamagotchi! </h1>
 			<br>
 			<h2 style="align-self:flex-end;">Patrick Sanchez, Karson Du, Ryssa Malibiran, Alexa Banuelos</h2>
-			<main>
-				Apples
-			</main>
-		</div>
-	</body>
-=======
 			
-			<main>
-				Apples
-			</main>
-		</div>
-	</body>
-=======
-			
-			<main>
-				Apples
-			</main>
-		</div>
-	</body>
-=======
-			
-			<main>
-				Apples
-			</main>
-		</div>
-	</body>
-=======
-			
-			<main>
-				Apples
-			</main>
-		</div>
-	</body>
-=======
 			
 			<main>
 				<div class="content">
 					<h3>Abstract</h3>
-<<<<<<< HEAD
 					<p>
 						Texture the Tamagotchi tackles the question, "how does one apply a two-dimensional texture to a three-dimensional surface?" We used WebGL through the Three.js library to render a custom 3D model of a Tamagotchi built in Blender, an egg-shaped Japanese handheld digital pet. Our implementation features freely navigable camera controls, changeable environment backgrounds, support for custom drawn textures and images, and UV projection to spherical, cylindrical, and ellipsoidal mappings. While we originally considered utilizing previous homeworks, we ultimately opted to develop our own system from scratch using Three.js to better fit our goals of wanting to be able to control the texture pipeline.
 						Texture The Tamagotchi! is an interactive visualizer that allows users to upload textures for the tamagotchi�s irregular mesh surface, and compare how spherical, cylindrical, and ellipsoidal coordinate systems can be applied to approximate the UV mappings during projection. Using Three.js, the project runs through your local browser and contains a scene of the Tamagotchi, a reference object that uses the ideal coordinate system, as well as a grass texture and environment background for ambiance. Due to the egg-like shape of the Tamagotchi mesh, users are also able to move the camera around with their mouse and keyboard to inspect finer details.
@@ -152,14 +117,14 @@
 						The first iteration of image uploads and canvas drawings also had to be updated in order to also apply projection, which meant more texture loading and tracking between button interactions.
 						The first attempt to project textures to the tamagotchi was through experimentation with Three.js� shader material. While this would allow for real time moving projections onto multiple meshes, this was both unnecessary for the intended goals, and required GLSL which had only been lightly touched upon in the final HW of the class. Instead, the project could align more closely with the rasterization homework where we worked with textures, as objects can directly have their geometry meshes edited. However instead of mapping between two 2 dimensional planes, the uv mapping could be adjusted using standard 3D coordinates.
 						Javascript was completely new, and html + css styling to a large extent as well. Three.js has a significantly impactful tutorial that walks users through setting up node.js as well as creating a basic scene. This made onboarding more accessible, and also introduced primitives, cameras, and basic UI elements with their functions. Getting adjusted to the world scene took some experimentation, such as creating colored boxes as markers for where the axes lay in the world, as well as lighting for mesh materials that supported shadows.
-=======
+
 					<p>Texture The Tamagotchi! is an interactive visualizer that allows users to upload textures for the tamagotchi’s irregular mesh surface, and compare how spherical, cylindrical, and ellipsoidal coordinate systems can be applied to approximate the UV mappings during projection. Using Three.js, the project runs through your local browser and contains a scene of the Tamagotchi, a reference object that uses the ideal coordinate system, as well as a grass texture and environment background for ambiance. Due to the egg-like shape of the Tamagotchi mesh, users are also able to move the camera around with their mouse and keyboard to inspect finer details.
 
 					</p>
 
 					<h3>Technical Approach</h3>
 					<p>Three.js is predominantly used for webpage-based games and simulations, which made it the ideal choice for the project. Instead of building off of previous homeworks, the Three.js tutorial was helpful for learning javascript alongside handling primitives such as scene lighting, positioning, and rendering the ideal reference objects with the textures baked in. To start the project, Blender was used as the main tool for designing and exporting the mesh as a gltf file (the preferred file type for mesh imports in Three.js). The mesh started out as a simple disk, but was improved upon slowly, refining the shape as well as flaring out edges for the tamagotchi’s screen. After loading the tamagotchi shell in with Three.js, we could take advantage of the bounding box and bounding sphere of its geometry for defining key attributes in its cartesian coordinates. From a high-level perspective, the three algorithms of tamaGeoSphere, tamaGeoCylinder, and tamaGeoEllipsoid take in the bounding volumes of the entire tamagotchi and then iterates through all the vertices in the mesh. It first centers the cartesian coordinates [x,y,z] of the vertex, and then applies the relative transformation to identify the [u,v] texels from the active texture map to write into the mesh. These estimations are then stored as the tamagotchi’s uv attribute, which Three.js implicitly trusts when applying the active texture map to the material surface.
->>>>>>> fb484a7165aae1c1767f6b602f468de422fe4762
+
 
 					</p>
 					<p>tamaGeoSphere: 
@@ -220,7 +185,7 @@
 
 
 					<h3>Milestone Video</h3>
-<<<<<<< HEAD
+
 					<a href="https://berkeley.zoom.us/rec/share/eIVuLl84i-0bYDwwxfvKSryHbGBUVzjhWDOZIfMwzfoC76wjKO7YwjS14eJr5Rjd.W4i4k6HH56xzZjm9?startTime=1746427965000">
 						Link to video presentation.
 						Passcode: cr=sNW1^
@@ -228,12 +193,12 @@
 
 					<h3>Milestone Slides</h3>
 					<a href="https://docs.google.com/presentation/d/1gGXqlgaeMqjzXiLi80Nmu5UzzUqG5fna9s3-FBAGtrc/edit?slide=id.g34f3d1a2654_2_627#slide=id.g34f3d1a2654_2_627"> Link to slide presentation.</a>
-=======
+
 					<a href="">Link to video presentation.</a>
 
 					<h3>Milestone Slides</h3>
 					<a href="https://docs.google.com/presentation/d/1gGXqlgaeMqjzXiLi80Nmu5UzzUqG5fna9s3-FBAGtrc/edit?usp=sharing"> Link to slide presentation.</a>
->>>>>>> fb484a7165aae1c1767f6b602f468de422fe4762
+
 				</div>
 			</main>
 		</div>
